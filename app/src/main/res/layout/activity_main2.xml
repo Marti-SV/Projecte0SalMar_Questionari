@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity2">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:radius="10dp"
+        android:id="@+id/titol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MOVIE TITLE"
+        android:textAlignment="center"
+        android:textSize="34sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="415dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Segons Restants: 27"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/pregActual"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:background="#5D99E3"
+            android:gravity="center"
+            android:shadowRadius="180"
+            android:text="Pregunta actual: 1/5"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/opt1"
+                android:layout_width="159dp"
+                android:layout_height="97dp"
+                android:text="Option 1" />
+
+            <Space
+                android:layout_width="13dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/opt2"
+                android:layout_width="178dp"
+                android:layout_height="97dp"
+                android:text="Option 2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="103dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/opt3"
+                android:layout_width="189dp"
+                android:layout_height="97dp"
+                android:text="Option 3" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/opt4"
+                android:layout_width="183dp"
+                android:layout_height="97dp"
+                android:text="Option 4" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
