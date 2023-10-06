@@ -1,0 +1,74 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "El Padrino",
+      "answers": [1972, 1980, 1990, 1985],
+      "correctIndex": 0,
+      "poster": "https://image.tmdb.org/t/p/w500/10J7EQ8WvMYku8lcZrLewV2Ko4I.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Forrest Gump",
+      "answers": [1988, 1994, 2000, 1998],
+      "correctIndex": 1,
+      "poster": "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Titanic",
+      "answers": [1995, 2001, 1989, 1997],
+      "correctIndex": 3,
+      "poster": "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Pulp Fiction",
+      "answers": [1989, 1996, 1994, 2000],
+      "correctIndex": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg"
+    },
+    {
+      "id": 5,
+      "title": "El Senyor dels Anells: La Comunitat de l'Anell",
+      "answers": [1999, 2005, 1998, 2001],
+      "correctIndex": 3,
+      "poster": "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Gladiator",
+      "answers": [1998, 2005, 2000, 1999],
+      "correctIndex": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Matrix",
+      "answers": [1997, 1999, 2002, 1995],
+      "correctIndex": 1,
+      "poster": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Ciutadà Kane",
+      "answers": [1941, 1939, 1950, 1960],
+      "correctIndex": 0,
+      "poster": "https://image.tmdb.org/t/p/w500/sav0jxhqiH0bPr2vZFU0Kjt2nZL.jpg"
+    },
+    {
+      "id": 9,
+      "title": "El Rey Lleó",
+      "answers": [1994, 1990, 1998, 2000],
+      "correctIndex": 0,
+      "poster": "https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Inception",
+      "answers": [2008, 2012, 2005, 2010],
+      "correctIndex": 3,
+      "poster": "https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg"
+    }
+  ]
+}
