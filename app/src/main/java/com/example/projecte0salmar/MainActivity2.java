@@ -15,15 +15,25 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ImageView;
 
+import com.example.projecte0salmar.model.QuestionService;
+import com.example.projecte0salmar.model.Questions;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
-
+    private static final String BASE_URL = "http://192.168.1.195:4000/";
     TextView titol;
     TextView countDown;
     CountDownTimer cTimer = null;
@@ -37,6 +47,12 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         titol = (TextView) findViewById(R.id.titol);
         countDown = (TextView) findViewById(R.id.countDown);
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        getPreguntes();
         updateQuestion();
     }
 
@@ -107,7 +123,6 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         cTimer = new CountDownTimer(31000, 1000) {
             public void onTick(long millisUntilFinished) {
                 countDown.setText("Segons Restants: " + millisUntilFinished / 1000);
-                // logic to set the EditText could go here
             }
 
             public void onFinish() {
@@ -138,4 +153,39 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
             imageView.setImageBitmap(result);
         }
     }
+
+    private void getPreguntes() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        QuestionService questionService = retrofit.create(QuestionService.class);
+
+        Call<Questions> call = questionService.getPreguntes();
+        call.enqueue(new Callback<Questions>() {
+            @Override
+            public void onResponse(Call<Questions> call, Response<Questions> response) {
+                if(!response.isSuccessful()) {
+                    return;
+                }
+                Questions questions = response.body();
+                String content = "";
+                for(Questions.Question quest: questions.getQuestions()) {
+                    content += "answers:"+ quest.getAnswers() + "\n";
+                    content += "title:"+ quest.getTitle() + "\n";
+                    content += "poster:"+ quest.getPoster() + "\n";
+                    content += "id:"+ quest.getId() + "\n";
+                }
+                Log.d("QUESTION", questions.getQuestions().toString());
+
+            }
+
+            @Override
+            public void onFailure(Call<Questions> call, Throwable t) {
+                Log.d("ERROR", t.getMessage());
+            }
+        });
+    }
+
 }
